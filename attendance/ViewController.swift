@@ -19,7 +19,36 @@ class ViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    @IBAction func checkButtonTapped() {
+        let saveData = UserDefaults.standard
+        
+        if let saveData = saveData.array(forKey: "schedule") {
+            if saveData.count == 0 {
+                
+                let alert = UIAlertController(
+                    title: "登録",
+                    message: "まずは「登録」をタップしてイベント登録してください。",
+                    preferredStyle: UIAlertControllerStyle.alert
+                )
+                
+                let action = UIAlertAction(
+                    title: "OK",
+                    style: .default,
+                    handler: nil
+                )
+                
+                alert.addAction(action)
+            
+//                self.performSegue(withIdentifier: "toCheckView", sender: nil)
+            
+                self.present(alert, animated: true, completion: nil)
+            
+            }
+        }
+        
+    }
 
-
+    
 }
 

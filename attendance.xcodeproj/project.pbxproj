@@ -14,6 +14,9 @@
 		9C9FB7BE2095389E0067246D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C9FB7BC2095389E0067246D /* LaunchScreen.storyboard */; };
 		9C9FB7C92095389E0067246D /* attendanceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C9FB7C82095389E0067246D /* attendanceTests.swift */; };
 		9C9FB7D42095389E0067246D /* attendanceUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C9FB7D32095389E0067246D /* attendanceUITests.swift */; };
+		9C9FB7E220955BAD0067246D /* addViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C9FB7E120955BAD0067246D /* addViewController.swift */; };
+		9C9FB7E620955F1B0067246D /* LIstTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C9FB7E520955F1B0067246D /* LIstTableViewController.swift */; };
+		9C9FB7EA2095974B0067246D /* cellViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C9FB7E92095974B0067246D /* cellViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +50,9 @@
 		9C9FB7CF2095389E0067246D /* attendanceUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = attendanceUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9C9FB7D32095389E0067246D /* attendanceUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = attendanceUITests.swift; sourceTree = "<group>"; };
 		9C9FB7D52095389E0067246D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9C9FB7E120955BAD0067246D /* addViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = addViewController.swift; sourceTree = "<group>"; };
+		9C9FB7E520955F1B0067246D /* LIstTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LIstTableViewController.swift; sourceTree = "<group>"; };
+		9C9FB7E92095974B0067246D /* cellViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cellViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +109,9 @@
 				9C9FB7BA2095389E0067246D /* Assets.xcassets */,
 				9C9FB7BC2095389E0067246D /* LaunchScreen.storyboard */,
 				9C9FB7BF2095389E0067246D /* Info.plist */,
+				9C9FB7E120955BAD0067246D /* addViewController.swift */,
+				9C9FB7E520955F1B0067246D /* LIstTableViewController.swift */,
+				9C9FB7E92095974B0067246D /* cellViewController.swift */,
 			);
 			path = attendance;
 			sourceTree = "<group>";
@@ -257,7 +266,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				9C9FB7B62095389C0067246D /* ViewController.swift in Sources */,
+				9C9FB7E220955BAD0067246D /* addViewController.swift in Sources */,
 				9C9FB7B42095389C0067246D /* AppDelegate.swift in Sources */,
+				9C9FB7EA2095974B0067246D /* cellViewController.swift in Sources */,
+				9C9FB7E620955F1B0067246D /* LIstTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
