@@ -48,7 +48,8 @@ class addViewController: UIViewController {
             handler: {action in self.dismiss(animated: true, completion: nil)})
         
         alert.addAction(action)
-            
+        
+        nowNumber += 1
         
         //self.performSegue(withIdentifier: "toAdd", sender: nil)
 

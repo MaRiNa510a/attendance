@@ -25,20 +25,22 @@ class ViewController: UIViewController {
         
         if let saveData = saveData.array(forKey: "schedule") {
             if saveData.count == 0 {
+                self.performSegue(withIdentifier: "toAddView", sender: nil)
+            }
+        }
                 
-                let alert = UIAlertController(
+        let alert: UIAlertController = UIAlertController(
                     title: "登録",
                     message: "まずは「登録」をタップしてイベント登録してください。",
-                    preferredStyle: UIAlertControllerStyle.alert
+                    preferredStyle: .alert
                 )
                 
-                let action = UIAlertAction(
+        alert.addAction(UIAlertAction(
                     title: "OK",
                     style: .default,
                     handler: nil
-                )
-                
-                alert.addAction(action)
+                ))
+        
             
 //                self.performSegue(withIdentifier: "toCheckView", sender: nil)
             
@@ -47,8 +49,8 @@ class ViewController: UIViewController {
             }
         }
         
-    }
+
 
     
-}
+
 

@@ -19,16 +19,18 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rKG-KY-Xf5">
-                                <rect key="frame" x="172" y="258" width="31" height="30"/>
+                                <rect key="frame" x="157" y="255" width="61" height="48"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <state key="normal" title="登録"/>
                                 <connections>
-                                    <segue destination="M9L-9T-6XT" kind="presentation" identifier="" id="Bv4-Jj-KGy"/>
+                                    <segue destination="M9L-9T-6XT" kind="presentation" identifier="toAddView" id="Bv4-Jj-KGy"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sKG-RB-afu">
-                                <rect key="frame" x="172" y="396" width="31" height="30"/>
+                                <rect key="frame" x="157" y="393" width="61" height="48"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <state key="normal" title="確認"/>
                                 <connections>
                                     <action selector="checkButtonTapped" destination="BYZ-38-t0r" eventType="touchUpInside" id="giY-cq-HWG"/>
@@ -42,6 +44,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="670" y="-58"/>
         </scene>
         <!--Add View Controller-->
         <scene sceneID="cxA-TD-a1w">
@@ -117,7 +120,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tMg-g4-5AT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1783" y="33"/>
+            <point key="canvasLocation" x="1654" y="-58"/>
         </scene>
         <!--一覧-->
         <scene sceneID="9av-fQ-Ukc">
@@ -128,7 +131,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="50" id="2DA-LF-3Xs">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="50" id="2DA-LF-3Xs">
                                 <rect key="frame" x="0.0" y="28" width="375" height="50"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="2DA-LF-3Xs" id="CoZ-tZ-dId">
@@ -145,7 +148,7 @@
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="84W-cX-z51" kind="presentation" identifier="cell" id="mAU-Zc-gQH"/>
+                                    <segue destination="84W-cX-z51" kind="show" identifier="cell" id="mAU-Zc-gQH"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -161,12 +164,17 @@
                                 <segue destination="BYZ-38-t0r" kind="presentation" identifier="toHome" id="luV-qn-beW"/>
                             </connections>
                         </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" style="plain" systemItem="add" id="DFF-DR-yYT">
+                            <connections>
+                                <segue destination="M9L-9T-6XT" kind="presentation" id="Fny-kE-k7h"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Jh4-hr-2Z6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1692" y="857"/>
+            <point key="canvasLocation" x="1654" y="857"/>
         </scene>
         <!--Cell View Controller-->
         <scene sceneID="8Fp-IY-RMq">
@@ -204,7 +212,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JCY-mb-oPI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2658" y="878"/>
+            <point key="canvasLocation" x="2596" y="857"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Sci-12-Hyg">
@@ -226,6 +234,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
+        <segue reference="Fny-kE-k7h"/>
         <segue reference="luV-qn-beW"/>
     </inferredMetricsTieBreakers>
 </document>

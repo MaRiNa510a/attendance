@@ -44,19 +44,16 @@ class LIstTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        return date.count
     }
 
-//
+
 //    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 //        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! LIstTableViewController
 //        
 //        let now = saveData[indexPath.row]
 //        
 //        cell.name.text = now["schedule.name"]
-//        
-//
-//
 //
 //        return cell
 //    }
