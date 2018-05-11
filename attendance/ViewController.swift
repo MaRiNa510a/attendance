@@ -9,6 +9,8 @@
 import UIKit
 
 class ViewController: UIViewController {
+    
+
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,11 +22,12 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    
     @IBAction func checkButtonTapped() {
         let saveData = UserDefaults.standard
         
         if let saveData = saveData.array(forKey: "schedule") {
-            if saveData.count == 0 {
+            if nowNumber == 0 {
                 self.performSegue(withIdentifier: "toAddView", sender: nil)
             }
         }
@@ -41,9 +44,6 @@ class ViewController: UIViewController {
                     handler: nil
                 ))
         
-            
-//                self.performSegue(withIdentifier: "toCheckView", sender: nil)
-            
                 self.present(alert, animated: true, completion: nil)
             
             }
