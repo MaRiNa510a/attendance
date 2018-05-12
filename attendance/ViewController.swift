@@ -27,7 +27,7 @@ class ViewController: UIViewController {
         let saveData = UserDefaults.standard
         
         if let saveData = saveData.array(forKey: "schedule") {
-            if nowNumber == 0 {
+            if saveData.count == 0 {
                 self.performSegue(withIdentifier: "toAddView", sender: nil)
             }
         }
