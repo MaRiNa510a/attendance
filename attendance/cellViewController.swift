@@ -10,21 +10,23 @@ import UIKit
 
 class cellViewController: UIViewController {
     
-    @IBOutlet var label: UILabel!
-    @IBOutlet var datePicker: UIDatePicker!
+    @IBOutlet var datelabel: UILabel!
+    @IBOutlet var namelabel: UILabel!
+    @IBOutlet var reasonlabel: UILabel!
     
-    @IBAction func changeDate(sender: UIDatePicker) {
-        label.text = self.format(date: datePicker.date)
-    }
-    
-    func format(date:Date) ->String {
-        let dateformatter = DateFormatter()
-        dateformatter.dateFormat = "yyyy/mm/dd"
-        let strDate = dateformatter.string(from: date)
-        
-        return strDate
-        
-    }
+//    @IBAction func changeDate(sender: UIDatePicker) {
+//        datelabel.text = self.format(date: datePicker.date)
+//    }
+//
+//    func format(date:Date) ->String {
+//        let dateformatter = DateFormatter()
+//        dateformatter.dateFormat = "yyyy/mm/dd"
+//        let strDate = dateformatter.string(from: date)
+//
+//        return strDate
+//
+//    }
+
 
     override func viewDidLoad() {
         super.viewDidLoad()

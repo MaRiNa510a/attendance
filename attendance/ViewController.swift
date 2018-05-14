@@ -24,14 +24,7 @@ class ViewController: UIViewController {
     
     
     @IBAction func checkButtonTapped() {
-        let saveData = UserDefaults.standard
-        
-        if let saveData = saveData.array(forKey: "schedule") {
-            if saveData.count == 0 {
-                self.performSegue(withIdentifier: "toAddView", sender: nil)
-            }
-        }
-                
+        if savedata().userDefault.array(forKey: "schedule.date") == nil{
         let alert: UIAlertController = UIAlertController(
                     title: "登録",
                     message: "まずは「登録」をタップしてイベント登録してください。",
@@ -45,11 +38,15 @@ class ViewController: UIViewController {
                 ))
         
                 self.present(alert, animated: true, completion: nil)
-            
-            }
         }
-        
-
+        else  {
+           self.performSegue(withIdentifier: "toLIstTableViewController", sender: nil)
+        }
+    }
+}
+class savedata{
+    var userDefault = UserDefaults.standard
+}
 
     
 

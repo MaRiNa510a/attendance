@@ -12,22 +12,47 @@ class LIstTableViewController: UITableViewController {
     
     //@IBOutlet var dateTextField: UITextField!
     
-    var date:[String] = []
+    var date:[NSDate] = []
     
     let saveData = UserDefaults.standard
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        if saveData.array(forKey: "schedule") != nil {
-            date = saveData.array(forKey: "schedule") as! [String]
-        }
-        tableView.reloadData()
+
+        tableView.register(UINib(nibName: "ListTableViewCell", bundle: nil),
+                           forCellReuseIdentifier: "cell")
+        
+//        if saveData.array(forKey: "schedule") != nil {
+//            date = saveData.array(forKey: "schedule") as! [String]
+//        }
+//        tableView.reloadData()
+        
+        
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+//        if saveData.array(forKey: "schedule.date") != nil {
+//
+//        func format(date:NSDate) ->String {
+//                date = saveData
+//                    let dateformatter = DateFormatter()
+//                    dateformatter.dateFormat = "yyyy/mm/dd"
+//            let strDate = dateformatter.string(from: date as Date)
+//
+//                    return strDate
+//            }
+//
+//            date = saveData.array(forKey: "schedule.date") as! [String]
+//        }
+        date = saveData.array(forKey: "schedule.date") as! [NSDate]
+        tableView.reloadData()
     }
 
     override func didReceiveMemoryWarning() {
@@ -46,17 +71,27 @@ class LIstTableViewController: UITableViewController {
         // #warning Incomplete implementation, return the number of rows
         return date.count
     }
+    func format(date:NSDate) ->String {
+        print(date)
+        let dateformatter = DateFormatter()
+        dateformatter.dateFormat = "yyyy/MM/dd"
+        let strDate = dateformatter.string(from: date as Date)
+        return strDate
+    }
 
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
+            as! ListTableViewCell
+        cell.dateLabel.text = format(date: date[indexPath.row])
+        
+        return cell
+        
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        self.performSegue(withIdentifier: "tocell", sender: nil)
+    }
 
-//    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-//        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! LIstTableViewController
-//        
-//        let now = saveData[indexPath.row]
-//        
-//        cell.name.text = now["schedule.name"]
-//
-//        return cell
-//    }
 
     /*
     // Override to support conditional editing of the table view.

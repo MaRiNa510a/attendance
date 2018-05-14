@@ -49,7 +49,6 @@ class addViewController: UIViewController {
         
         alert.addAction(action)
         
-        nowNumber += 1
         
         //self.performSegue(withIdentifier: "toAdd", sender: nil)
 
@@ -61,11 +60,13 @@ class addViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        if saveData.array(forKey: "schedule") != nil {
+        if saveData.array(forKey: "schedule.date") != nil {
             date = saveData.array(forKey: "schedule.date") as! [NSDate]
             name = saveData.array(forKey: "schedule.name") as! [String]
             reason = saveData.array(forKey: "schedule.reason") as! [String]
+
         }
+        
         
 
 
