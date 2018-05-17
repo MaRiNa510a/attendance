@@ -13,23 +13,21 @@ class cellViewController: UIViewController {
     @IBOutlet var datelabel: UILabel!
     @IBOutlet var namelabel: UILabel!
     @IBOutlet var reasonlabel: UILabel!
-    
-//    @IBAction func changeDate(sender: UIDatePicker) {
-//        datelabel.text = self.format(date: datePicker.date)
-//    }
-//
-//    func format(date:Date) ->String {
-//        let dateformatter = DateFormatter()
-//        dateformatter.dateFormat = "yyyy/mm/dd"
-//        let strDate = dateformatter.string(from: date)
-//
-//        return strDate
-//
-//    }
 
+    var cellIndex: Int!
+    var label1: UILabel!
+    var NameArray: [String]!
+    var label2: UILabel!
+    var ReasonArray: [String]!
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        NameArray = savedata.array(forkey: "schedule.name") as! [String]
+        label1 = NameArray[cellIndex]
+        
+        ReasonArray = savedata.array(forkey: "schedule.reason") as! [String]
+        label2 = ReasonArray[cellIndex]
 
         // Do any additional setup after loading the view.
     }

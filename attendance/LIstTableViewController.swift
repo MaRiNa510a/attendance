@@ -21,7 +21,7 @@ class LIstTableViewController: UITableViewController {
 
         tableView.register(UINib(nibName: "ListTableViewCell", bundle: nil),
                            forCellReuseIdentifier: "cell")
-        
+
 //        if saveData.array(forKey: "schedule") != nil {
 //            date = saveData.array(forKey: "schedule") as! [String]
 //        }
@@ -72,7 +72,7 @@ class LIstTableViewController: UITableViewController {
         return date.count
     }
     func format(date:NSDate) ->String {
-        print(date)
+//        print(date)
         let dateformatter = DateFormatter()
         dateformatter.dateFormat = "yyyy/MM/dd"
         let strDate = dateformatter.string(from: date as Date)
@@ -88,8 +88,17 @@ class LIstTableViewController: UITableViewController {
         
     }
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        self.performSegue(withIdentifier: "tocell", sender: nil)
+    var Index = 0
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        Index = indexPath.row
+        performSegue(withIdentifier: "toCellViewController", sender: nil)
+    }
+
+    override func prepare(for segue: UIStoryboardSegue, sender: Any!) {
+        if (segue.identifier == "toCellViewController") {
+    let cellVC: cellViewController = (segue.destination as? cellViewController)!
+            cellVC.cellIndex = Index
+    }
     }
 
 
