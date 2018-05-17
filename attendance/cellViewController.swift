@@ -10,25 +10,24 @@ import UIKit
 
 class cellViewController: UIViewController {
     
-    @IBOutlet var datelabel: UILabel!
+//    @IBOutlet var datelabel: UILabel!
     @IBOutlet var namelabel: UILabel!
     @IBOutlet var reasonlabel: UILabel!
 
     var cellIndex: Int!
-    var label1: UILabel!
     var NameArray: [String]!
-    var label2: UILabel!
     var ReasonArray: [String]!
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        NameArray = savedata.array(forkey: "schedule.name") as! [String]
-        label1 = NameArray[cellIndex]
+        NameArray = savedata().userDefault.array(forKey: "schedule.name") as! [String]
+        namelabel.text = NameArray[cellIndex]
         
-        ReasonArray = savedata.array(forkey: "schedule.reason") as! [String]
-        label2 = ReasonArray[cellIndex]
+        ReasonArray = savedata().userDefault.array(forKey: "schedule.reason") as! [String]
+        reasonlabel.text = ReasonArray[cellIndex]
 
+        print("a")
         // Do any additional setup after loading the view.
     }
 

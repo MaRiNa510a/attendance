@@ -116,7 +116,6 @@
                         <outlet property="nameTextField" destination="jYx-8g-ZbM" id="ndp-Cy-ieQ"/>
                         <outlet property="reasonLabel" destination="aru-Qu-9Eo" id="OVB-Qa-vBc"/>
                         <outlet property="reasonTextField" destination="Nin-Oz-ZBo" id="c0K-vA-Z6z"/>
-                        <segue destination="BYZ-38-t0r" kind="presentation" identifier="toAdd" id="cZ3-3o-zxD"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tMg-g4-5AT" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -165,11 +164,6 @@
                                 <segue destination="BYZ-38-t0r" kind="presentation" identifier="toHome" id="luV-qn-beW"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" style="plain" systemItem="add" id="DFF-DR-yYT">
-                            <connections>
-                                <segue destination="M9L-9T-6XT" kind="presentation" id="Fny-kE-k7h"/>
-                            </connections>
-                        </barButtonItem>
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                 </tableViewController>
@@ -185,13 +179,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="日付" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K4a-EZ-sWv">
-                                <rect key="frame" x="42" y="123" width="61" height="36"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="名前" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ghb-4e-RWJ">
                                 <rect key="frame" x="38" y="292" width="61" height="36"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -206,35 +193,13 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bag-LW-WYy">
-                                <rect key="frame" x="106" y="180" width="163" height="69"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kQk-m1-Mrn">
-                                <rect key="frame" x="106" y="336" width="163" height="69"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DoH-44-hyy">
-                                <rect key="frame" x="106" y="506" width="163" height="69"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="STD-Yz-a6m"/>
                     </view>
                     <connections>
-                        <outlet property="datelabel" destination="Bag-LW-WYy" id="Lsf-Uy-esi"/>
-                        <outlet property="namelabel" destination="kQk-m1-Mrn" id="JvE-uR-Wv3"/>
-                        <outlet property="reasonlabel" destination="DoH-44-hyy" id="Brz-zC-ZZg"/>
+                        <outlet property="namelabel" destination="Ghb-4e-RWJ" id="OCI-e2-nml"/>
+                        <outlet property="reasonlabel" destination="VTj-sn-lT3" id="wRK-jg-NQH"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JCY-mb-oPI" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -260,8 +225,4 @@
             <point key="canvasLocation" x="670" y="857"/>
         </scene>
     </scenes>
-    <inferredMetricsTieBreakers>
-        <segue reference="Fny-kE-k7h"/>
-        <segue reference="luV-qn-beW"/>
-    </inferredMetricsTieBreakers>
 </document>
