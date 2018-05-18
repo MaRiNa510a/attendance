@@ -148,7 +148,7 @@
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="84W-cX-z51" kind="show" identifier="tocell" id="mAU-Zc-gQH"/>
+                                    <segue destination="84W-cX-z51" kind="show" identifier="toCellViewController" id="mAU-Zc-gQH"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>

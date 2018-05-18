@@ -12,9 +12,6 @@ class ListTableViewCell: UITableViewCell {
     
     @IBOutlet var dateLabel: UILabel!
     
-    
-    
-    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
